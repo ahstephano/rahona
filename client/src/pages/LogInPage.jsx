@@ -1,8 +1,14 @@
-import { EyeClosed, User2Icon } from "lucide-react"
+import { EyeClosed, EyeIcon, User2Icon } from "lucide-react"
 import SkyBackGround from "../components/SkyBackGround"
 import { Link } from "react-router"
+import { useState } from "react"
 
 const LogInPage = () => {
+    const [eyeClosed, setEyeClosed] = useState(true)
+    const handleEyeButtonClick = () => {
+        setEyeClosed(!eyeClosed)
+    }
+    
     return (
         <div className='w-screen h-screen text-white'>
             <SkyBackGround />
@@ -18,8 +24,13 @@ const LogInPage = () => {
                             <div>
                                 <label htmlFor="pwdIn">Password</label>
                                 <div className="flex items-center gap-2.5">
-                                    <input id="pwdIn" placeholder="Your password" className="input outline-0 my-2.5" type="password"></input>
-                                    <EyeClosed />
+                                    <input id="pwdIn" placeholder="Your password" className="input outline-0 my-2.5" type={eyeClosed ? ("password") : ("text")}></input>
+                                    {
+                                        eyeClosed ? 
+                                            (<EyeClosed onClick={handleEyeButtonClick} />)
+                                        :
+                                            (<EyeIcon onClick={handleEyeButtonClick} />)
+                                    }
                                 </div>
                             </div>
                         </div>

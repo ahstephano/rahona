@@ -3,6 +3,10 @@ import SkyBackGround from "../components/SkyBackGround"
 import { Link } from "react-router"
 
 const SignUpPage = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
+        console.log("Sign Up Button")
+    }
   return (
     <div className='w-screen h-screen text-white'>
             <SkyBackGround />
@@ -13,10 +17,10 @@ const SignUpPage = () => {
                         <div className="">
                             <div>
                                 <label htmlFor="emailIN" className="">Your email</label>
-                                <input id="emailIN" placeholder="Rakoto" className="input outline-0 w-full my-2.5"></input>
+                                <input id="emailIN" placeholder="example@example.com" className="input outline-0 w-full my-2.5"></input>
                             </div>
                         </div>
-                        <button type="submit" className="btn btn-primary w-full my-3.5">Continue</button>
+                        <button type="submit" onClick={handleClick} className="btn btn-primary w-full my-3.5">Continue</button>
                     </form>
                     <div className="pt-2.5">
                         <p className="text-black/50 text-sm">
