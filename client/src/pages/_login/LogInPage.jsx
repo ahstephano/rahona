@@ -1,5 +1,5 @@
 import { EyeClosed, EyeIcon, User2Icon } from "lucide-react"
-import SkyBackGround from "../components/SkyBackGround"
+import SkyBackGround from "../../components/SkyBackGround"
 import { Link } from "react-router"
 import { useState } from "react"
 

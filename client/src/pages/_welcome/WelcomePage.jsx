@@ -1,6 +1,6 @@
 import { ArrowRightIcon, CloudFogIcon, CloudIcon } from 'lucide-react'
 import { Link } from 'react-router'
-import SkyBackGround from '../components/SkyBackGround'
+import SkyBackGround from '../../components/SkyBackGround'
 
 const WelcomePage = () => {
   return (
